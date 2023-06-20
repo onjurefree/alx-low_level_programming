@@ -2,7 +2,7 @@
 
 /**
   * main - Print of the all multiples of 3 or 5 up to 1024
-  * Return Always (success)
+  * Return: Always (success)
   */
 
 int main(void)
