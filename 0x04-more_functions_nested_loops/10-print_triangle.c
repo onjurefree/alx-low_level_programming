@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_square - Print n squares according n number of times
- * @size: The number of squires/number of times
+ * print_triangle - Prints a triangleof  squares according parameter
+ * @size: The size of the squares triangle
  * Return: empty
  */
 
-void print_squire(int size)
+void print_triangle(int size)
 
 {
 	int x, y, z;
