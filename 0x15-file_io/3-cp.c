@@ -32,10 +32,11 @@ char *create_buffer(char *file)
   */
 void close_file(int fd)
 {
-	int j;
-	j = close(fd);
+	int n;
 
-	if (j == -1)
+	n = close(fd);
+
+	if (n == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d/n", fd);
 		exit(100);
