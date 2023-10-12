@@ -5,10 +5,10 @@
 * dlistint_t linked list
 *
 * @lead: lead of the list
-* @index: index of the list
+* @index: index of the new node
 * Return: 1 if it succeeded, -1 if it failed
 */
-int delete_dnodeint_t_index(dlistint_t **lead, unsigned int index)
+int delete_dnodeint_at_index(dlistint_t **lead, unsigned int index)
 {
 dlistint_t *l1;
 dlistint_t *l2;

@@ -27,7 +27,7 @@ while (l->prev != NULL)
 l = l->prev;
 }
 
-new-> next = l;
+new->next = l;
 
 if (l != NULL)
 l->prev = new;

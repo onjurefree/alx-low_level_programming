@@ -5,7 +5,7 @@
 * a given position
 *
 * @l: lead of the list
-* @idex: index of the new node
+* @idx: index of the new node
 * @n: value of the new node
 * Return: the address of the new node, or NULL if it failed
 */

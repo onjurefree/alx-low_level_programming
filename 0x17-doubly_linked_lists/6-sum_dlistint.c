@@ -21,7 +21,7 @@ lead = lead->prev;
 while (lead != NULL)
 {
 sum += lead->n;
-lead = lead ->next;
+lead = lead->next;
 }
 }
 return (sum);
