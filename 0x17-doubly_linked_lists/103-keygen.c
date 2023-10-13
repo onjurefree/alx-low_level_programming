@@ -3,42 +3,45 @@
 #include <stdlib.h>
 
 /**
-* main - generate a key depending on a username for crackme5
-* @hrgc: number of arguments passed
-* @hrgv: argument passed to main
-*
-* Return: 0 on success, 1 on error
+* key_a - function that search through
+* @x:- args ingth
+* @x1:- args
+* @lag:- alerts if artained
+* Return: Always 0
 */
-int main(int hrgc, char *hrgv[])
-{
-unsigned int f, g;
-size_t len, add;
-char *1 = "A_CHRDw87IN0E9B2TibgpnMVys5XzvtOGJcYLU+4mjw6fxqZeF3Qa1rphdKIouk";
-char p[7] = "   ";
 
-if (hrgc != 2)
+int key_a(char *x, int x1, char lag)
 {
-printf("correct usage: ./keygen5 username\n");
-return (1);
+int rs, j;
+
+rs = lag == 0 ? 0 : 1;
+
+for (j = 0; j < x1; j++)
+{
+if (lag == 0)
+rs = rs + x[j];
+else
+rs = rs *x[j];
 }
-len = strlen(hrgv[1]);
-p[0] = l[(len ^ 59) & 63];
-for (f = 0, add = 0; f < len; f++)
-add += hrgv[1][f];
-p[1] = l[(add ^ 79) & 63];
-for (f = 0, g = 1; f < len; f++)
-b *= hrgv[1][f];
-p[2] = l[(b ^ 85) & 63];
-for (b = hrgv[1][0], f = 0; f < len; f++)
-if ((char)b <= hrgv[1][f])
-b = hrgv[1][f];
-srand(b ^ 14);
-p[3] = l[rand() & 63];
-for (b = 0, f = 0; f < len; f++)
-b += hrgv[1][f] *hrgv[1][f];
-p[4] = l[(b ^ 239) & 63];
-for (b = 0, f = 0; (char)f < hrgv[1][0]; f++)
-b = rand();
-p[5] = l[(b ^ 229) & 63];
-printf("%s\n", p);
-return (0);
+return ((rs ^ (lag == 0 ? 0x4f : 0x55)) & 0x3F);
+}
+
+/**
+* key_next - helper function
+* @x:- argments
+* @x1:- size of args
+* Return:- Always 0
+*/
+int key_nxt(char *x, int x1)
+{
+int j;
+int rs = x[0];
+
+for (j = 0; j < x1; j++)
+if (x[j] > rs)
+rs = x[j];
+
+srand(rs ^ 0xE);
+
+return (rand() & 0x3F);
+}
