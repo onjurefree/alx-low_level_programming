@@ -29,5 +29,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **lead, const int n);
 dlistint_t *add_dnodeint(dlistint_t **lead, const int n);
 size_t dlistint_len(const dlistint_t *l);
 size_t print_dlistint(const dlistint_t *l);
+int key_a(char *x, int x1, char lag);
+int key_nxt(char *x, int x1);
 
 #endif

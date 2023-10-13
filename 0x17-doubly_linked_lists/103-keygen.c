@@ -27,7 +27,7 @@ return ((rs ^ (lag == 0 ? 0x4f : 0x55)) & 0x3F);
 }
 
 /**
-* key_next - helper function
+* key_nxt - helper function
 * @x:- argments
 * @x1:- size of args
 * Return:- Always 0
